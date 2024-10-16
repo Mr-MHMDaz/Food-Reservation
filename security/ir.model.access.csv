@@ -1,0 +1,14 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_food_foods_full_admin_asl,دسترسی به مدل غذا - فول اکسس,model_food_foods,foods_group_admin,1,1,1,1
+access_food_weeks_full_admin_asl,دسترسی به مدل غذا - فول اکسس,model_food_weeks,foods_group_admin,1,1,1,1
+access_food_users_full_admin_asl,دسترسی به مدل غذا - فول اکسس,model_food_users,foods_group_admin,1,1,1,1
+access_food_days_full_admin_asl,دسترسی به مدل غذا - فول اکسس,model_food_days,foods_group_admin,1,1,1,1
+access_food_guest_full_admin_asl,دسترسی به مدل غذا - فول اکسس,model_food_guest,foods_group_admin,1,1,1,1
+
+access_food_foods_full_user_asl,دسترسی به مدل غذا - فول اکسس,model_food_foods,foods_group_user,1,0,0,0
+access_food_weeks_full_user_asl,دسترسی به مدل غذا - فول اکسس,model_food_weeks,foods_group_user,1,0,0,0
+access_food_users_full_user_asl,دسترسی به مدل غذا - فول اکسس,model_food_users,foods_group_user,1,1,1,1
+access_food_days_full_user_asl,دسترسی به مدل غذا - فول اکسس,model_food_days,foods_group_user,1,0,0,0
+access_food_guest_full_user_asl,دسترسی به مدل غذا - فول اکسس,model_food_guest,foods_group_user,1,0,0,0
+
+

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+            <record id="action_food_reservation_menu" model="ir.actions.act_window">
+            <field name="name">اضافه کردن غذا</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">food.foods</field>
+            <field name="view_mode">tree,form</field>
+            <field name="context">{}</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+
+                :( نهارمون تموم شده فردا بیا
+
+                </p>
+            </field>
+    </record>
+
+
+    <record id="view_tree_food_foods" model="ir.ui.view">
+        <field name="name">food.foods.tree</field>
+        <field name="model">food.foods</field>
+        <field name="arch" type="xml">
+            <tree string="Foods">
+                <field name="name"/>
+                <field name="food_type"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_form_food_foods" model="ir.ui.view">
+        <field name="name">food.foods.form</field>
+        <field name="model">food.foods</field>
+        <field name="arch" type="xml">
+            <form string="Foods">
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="food_type"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+</odoo>

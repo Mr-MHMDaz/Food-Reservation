@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_day_of_week_tree" model="ir.ui.view">
+        <field name="name">day.of.week.tree</field>
+        <field name="model">food.days</field>
+        <field name="arch" type="xml">
+            <tree string="Days of the Week">
+                <field name="week_id"/>
+                <field name="date"/>
+                <field name="name"/>
+                <field name="food_id" widget="many2many_tags"/>
+                <field name="polo_count"/>
+                <field name="khorak_count"/>
+                <field name="total_reserv"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_day_of_week_form" model="ir.ui.view">
+        <field name="name">day.of.week.form</field>
+        <field name="model">food.days</field>
+        <field name="arch" type="xml">
+            <form string="Day of the Week">
+                <group>
+                    <field name="week_id" required="True"/>
+                    <field name="date" required="True"/>
+                    <field name="name"/>
+                    <field name="food_id" widget="many2many_tags"/>
+                    <field name="polo_count"/>
+                    <field name="khorak_count"/>
+                    <field name="total_reserv"/>
+                </group>
+                <group>
+                    <field name="users_is"/>
+                </group>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_food_reservation_days" model="ir.actions.act_window">
+        <field name="name">Days of the Week</field>
+        <field name="res_model">food.days</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+
+</odoo>

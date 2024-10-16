@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<odoo>
+
+    <record id="action_food_reservation_weeks" model="ir.actions.act_window">
+        <field name="name">Weeks of the Year</field>
+        <field name="res_model">food.weeks</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="food_reservation_weeks_tree_view" model="ir.ui.view">
+        <field name="name">week.of.year.tree</field>
+        <field name="model">food.weeks</field>
+        <field name="arch" type="xml">
+            <tree string="Weeks of the Year">
+                <field name="start_date"/>
+                <field name="end_date"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="food_reservation_weeks_form_view" model="ir.ui.view">
+        <field name="name">week.of.year.form</field>
+        <field name="model">food.weeks</field>
+        <field name="arch" type="xml">
+            <form string="Weeks of the Year">
+                <group>
+                    <field name="start_date"/>
+                    <field name="end_date"/>
+                </group>
+            </form>
+        </field>
+    </record>
+
+</odoo>
+
+

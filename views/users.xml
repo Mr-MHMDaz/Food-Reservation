@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="action_food_reservation_users" model="ir.actions.act_window">
+        <field name="name">کارمندان</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">food.users</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+  لطفا کارمندان را انتخاب کنید
+            </p>
+        </field>
+    </record>
+
+    <record id="view_tree_food_users" model="ir.ui.view">
+        <field name="name">food.users.tree</field>
+        <field name="model">food.users</field>
+        <field name="arch" type="xml">
+            <tree string="Food Users">
+                <field name="employees"/>
+                <field name="visitant"/>
+                <field name="week_id"/>
+                <field name="day_id"/>
+                <field name="food_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_form_food_users" model="ir.ui.view">
+        <field name="name">food.users.form</field>
+        <field name="model">food.users</field>
+        <field name="arch" type="xml">
+            <form string="Food Users">
+                <sheet>
+                    <group>
+                        <field name="employees"/>
+                        <field name="visitant"/>
+                        <field name="week_id"/>
+                        <field name="day_id" domain="[('week_id', '=',week_id )]"/>
+                        <field name="food_id" domain="[('day_id', '=',day_id )]" />
+                    </group>
+                </sheet>
+                <div class="oe_chatter">
+                        <field name="message_follower_ids" groups="base.group_user"/>
+                        <field name="activity_ids"/>
+                        <field name="message_ids" options="{'post_refresh': 'recipients'}"/>
+                    </div>
+            </form>
+        </field>
+    </record>
+
+
+</odoo>
